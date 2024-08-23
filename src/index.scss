@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    height: 150vh;
+    background-color: #f4f4f4;
+    transition: .3s ease;
+}
+
+.container.dark-mode {
+    background-color: #000;
+}
