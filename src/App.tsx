@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import { useScrollPosition } from './hooks/useScrollPosition';
+import { ThemeContext } from './context/ThemeContext';
 
 const App = () => {
-  const scrollPosition = useScrollPosition();
+  const { dark } = useContext(ThemeContext);
+
+  console.log(dark);
   return (
-    <div className={scrollPosition > 0 ? 'container dark-mode' : 'container'}>
+    <div className={dark ? 'container dark-mode' : 'container'}>
       <Navbar />
     </div>
   );
