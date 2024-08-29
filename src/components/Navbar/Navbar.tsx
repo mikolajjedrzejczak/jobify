@@ -1,4 +1,4 @@
-// import { NavLink } from 'react-router-dom';
+
 import { useContext } from 'react';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import './Navbar.scss';
