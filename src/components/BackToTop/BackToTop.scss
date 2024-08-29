@@ -1,0 +1,32 @@
+.back-to-top {
+    visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: translate(-20px, -20px);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #1a89ff;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+    opacity: 0;
+    transform: translateY(30px);
+
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    svg {
+        width: 20px;
+    }
+}

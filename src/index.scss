@@ -15,11 +15,12 @@ a {
 }
 
 .container {
-    height: 150vh;
+    position: relative;
     background-color: #f4f4f4;
     transition: .3s ease;
 }
 
 .container.dark-mode {
     background-color: #000;
+    color: #fff;
 }

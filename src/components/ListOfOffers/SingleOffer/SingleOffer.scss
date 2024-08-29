@@ -1,0 +1,41 @@
+.single-offer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    &:nth-child(even) {
+        background-color: #33333305;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+        .single-offer__header {
+            display: flex;
+     
+            gap: 10px;
+            width: 100%;
+        
+        }
+
+        .single-offer__content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            align-items: center;
+        }
+    }
+}
+
+.container.dark-mode {
+    .single-offer {
+        .wrapper {
+            color: #000;
+        }
+    }
+}

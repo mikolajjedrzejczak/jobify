@@ -6,7 +6,6 @@
     position: relative;
     width: 40px;
     height: 20px;
-    cursor: pointer;
     transition: all 0.4s ease;
    
   }
@@ -23,6 +22,7 @@
     border-radius: 35px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
+    cursor: pointer;
   }
   
   .switch:before {
@@ -39,7 +39,7 @@
   }
   
   .checkbox:checked + .switch {
-    background-color: #4caf50; 
+    background-color: #1a89ff; 
   }
   
   .checkbox:checked + .switch:before {

@@ -1,16 +1,34 @@
-import { useContext } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import { ThemeContext } from './context/ThemeContext';
+import { createBrowserRouter } from 'react-router-dom';
+
+import { RouterProvider } from 'react-router-dom';
+import Home from './views/Home/Home';
+import JobOffers from './views/JobOffers/JobOffers';
+import JobOffer from './views/JobOffer/JobOffer';
+import Layout from './Layout/Layout';
 
 const App = () => {
-  const { dark } = useContext(ThemeContext);
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/job-offers',
+          element: <JobOffers />,
+        },
+        {
+          path: '/job-offers/:id',
+          element: <JobOffer />,
+        },
+      ],
+    },
+  ]);
 
-  console.log(dark);
-  return (
-    <div className={dark ? 'container dark-mode' : 'container'}>
-      <Navbar />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
